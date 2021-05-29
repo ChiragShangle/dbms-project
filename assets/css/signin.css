@@ -1,0 +1,211 @@
+/* SIGN_IN - 1920px START */
+.signin-parent {
+  margin: 80px auto;
+  width: 42%;
+  height: 60vh;
+  background: white;
+  box-shadow: 6px 6px 25px #00000029;
+  border-radius: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.signin-parent input[type="text"],
+input[type="password"] {
+  margin: 30px auto;
+  padding-left: 20px;
+  width: 80%;
+  height: 64px;
+  background: #ffffffe8;
+  border: 2px solid #707070;
+  border-radius: 9px;
+  font-size: 20px;
+}
+
+.sign-heading {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 35px;
+  font: Bold 71px Avenir-Next;
+  color: #408cff;
+}
+
+.signin-subdiv {
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.signin-sub-a {
+  display: flex;
+}
+
+.signin-sub-b {
+  font: Bold 18px Proxima-Nova;
+  color: #575757e8;
+}
+
+.signin-sub-c {
+  font: 20px Proxima-Nova;
+  color: #0058dd;
+}
+
+.signin-btn {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 71px;
+  width: 80%;
+  background: #00dc67;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: #ffffff;
+}
+.signin-banner {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.banner-line {
+  margin-top: 12px;
+  height: 2px;
+  width: 160px;
+  background-color: black;
+  opacity: 0.7;
+}
+.banner-text {
+  font: Bold 20px Proxima-Nova;
+  color: black;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.signin-social-med {
+  margin: auto;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.signin-acc {
+  margin: auto;
+  text-align: center;
+  height: 37px;
+  font: 25px Proxima-Nova;
+  color: #0058dd;
+}
+.r-role {
+  display: flex0;
+  justify-content: space-between;
+  align-items: center;
+}
+/* SIGN_IN - 1920px END */
+/*  PAGE STARTING --------------------------------- -480px-------------------------------- */
+@media screen and (max-width: 480px) {
+  .signin-parent {
+    width: 90%;
+    border-radius: 44px;
+    margin: 15vh auto;
+  }
+
+  .sign-inputbx1 {
+    height: 5vh;
+    font-size: 4vw;
+    margin: 10px auto;
+  }
+  .sign-inputbx2 {
+    height: 5vh;
+    font-size: 4vw;
+    margin: 10px auto;
+  }
+  .signin-subdiv {
+    flex-direction: column;
+  }
+  .signin-sub-c {
+    margin-top: 2vh;
+  }
+  .signin-btn {
+    height: 6vh;
+    width: 90%;
+  }
+  .signin-social-med {
+    width: 70%;
+  }
+}
+
+/* Media for tablets */
+@media only screen and (max-width: 768px) {
+  .signin-parent {
+    width: 90%;
+    border-radius: 44px;
+    margin: 15vh auto;
+  }
+
+  .sign-inputbx1 {
+    height: 5vh;
+    font-size: 4vw;
+    margin: 10px auto;
+  }
+  .sign-inputbx2 {
+    height: 5vh;
+    font-size: 4vw;
+    margin: 10px auto;
+  }
+  .signin-subdiv {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .signin-btn {
+    height: 6vh;
+    width: 90%;
+  }
+  .signin-social-med {
+    width: 70%;
+  }
+}
+
+/* Media for big tabs */
+@media only screen and (max-width: 918px) {
+  .signin-parent {
+    width: 90%;
+    border-radius: 44px;
+    margin: 15vh auto;
+  }
+
+  .sign-inputbx1 {
+    height: 5vh;
+    font-size: 4vw;
+    margin: 10px auto;
+  }
+  .sign-inputbx2 {
+    height: 5vh;
+    font-size: 4vw;
+    margin: 10px auto;
+  }
+  .signin-subdiv {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .signin-btn {
+    height: 6vh;
+    width: 90%;
+  }
+  .signin-social-med {
+    width: 70%;
+  }
+}
+
+/* Media for small laptops */
+@media only screen and (max-width: 1440px) {
+}

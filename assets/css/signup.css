@@ -1,0 +1,280 @@
+/*  -------------------------------------*/
+.register-container {
+  width: 35%;
+  margin: 5vh auto;
+  border-radius: 55px;
+  box-shadow: 6px 6px 20px #00000029;
+  padding: 5vh 5%;
+  font: Bold 20px Proxima-Nova;
+}
+
+.register-container input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  margin: 2vh 0 0 5px;
+  font: Bold 20px Proxima-Nova;
+}
+
+.register-container h1 {
+  font: Bold 71px Avenir-Next;
+  color: #408cff;
+  margin-bottom: 10px;
+}
+
+.input-flexer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-flexer select {
+  width: 100%;
+}
+
+.contact-info {
+  position: relative;
+  width: 100%;
+}
+
+.contact-info div {
+  position: absolute;
+  top: 46%;
+  left: 25px;
+}
+
+#cont-pad {
+  padding-left: 65px;
+}
+
+.input-flexer select {
+  height: 50px;
+  font: Bold 20px Proxima-Nova;
+  margin-top: 2vh;
+}
+
+.contact-info input {
+  border: 2px solid #707070;
+  width: 100%;
+}
+
+.update {
+  display: flex;
+  margin: 2vh auto;
+  font: 15px Proxima-Nova;
+}
+
+.register button {
+  width: 100%;
+  height: 65px;
+  background: #00dc67;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 24px Product-Sans;
+  color: #ffffff;
+}
+
+.su-divider {
+  width: 88%;
+  display: flex;
+  margin: 25px auto;
+  font: Bold 20px Proxima-Nova;
+  color: #000000e8;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.su-divider hr {
+  width: 25%;
+  background-color: #70707042;
+  border: none;
+}
+
+.register-container h5 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font: 28px Proxima-Nova;
+  color: #0058dd;
+  padding-bottom: 5vh;
+}
+
+/*  PAGE STARTING --------------------------------- -480px-------------------------------- */
+@media only screen and (max-width: 480px) {
+  .register-container {
+    width: 95%;
+    margin: 15vh auto;
+    border-radius: 40px;
+  }
+  .input-flexer {
+    flex-direction: column;
+  }
+
+  .input-flexer input {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .input-flexer select {
+    width: 100%;
+  }
+
+  .register {
+    width: 90%;
+  }
+  .add-input {
+    font-size: 4vw;
+  }
+  .contact-info {
+    font-size: 2vw;
+  }
+  .contact-info div {
+    font-size: 4vw;
+  }
+  .su-divider hr {
+    width: 25%;
+    height: 2px;
+  }
+
+  .register-container h5 {
+    font-size: 5vw;
+  }
+}
+
+/* Media for tablets */
+@media only screen and (max-width: 768px) {
+  .register-container {
+    width: 95%;
+    margin: 15vh auto;
+    border-radius: 40px;
+  }
+  .input-flexer {
+    display: flex;
+  }
+
+  .input-flexer input {
+    width: 100% !important;
+  }
+
+  .input-flexer select {
+    width: 100%;
+  }
+
+  .register {
+    width: 90%;
+  }
+  .add-input {
+    font-size: 4vw;
+  }
+
+  .contact-info {
+    font-size: 2.8vw;
+  }
+  .contact-info div {
+    font-size: 4vw;
+  }
+  .su-divider hr {
+    width: 25%;
+    height: 2px;
+  }
+
+  .register-container h5 {
+    font-size: 5vw;
+  }
+}
+
+/* Media for big tabs */
+@media only screen and (max-width: 918px) {
+  .register-container {
+    width: 80%;
+    margin: 15vh auto;
+    border-radius: 40px;
+  }
+  .input-flexer {
+    flex-direction: row;
+  }
+
+  .input-flexer input {
+    width: 100% !important;
+  }
+
+  .input-flexer select {
+    width: 100%;
+  }
+
+  .register {
+    width: 90%;
+  }
+  .add-input {
+    font-size: 4vw;
+  }
+
+  .contact-info {
+    font-size: 3vw;
+  }
+  .contact-info div {
+    font-size: 4vw;
+  }
+  .su-divider hr {
+    width: 25%;
+    height: 2px;
+  }
+
+  .register-container h5 {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .register-container {
+    width: 80%;
+    margin: 15vh auto;
+    border-radius: 40px;
+  }
+  .input-flexer {
+    flex-direction: row;
+  }
+
+  .input-flexer input {
+    width: 100% !important;
+  }
+
+  .input-flexer select {
+    width: 100%;
+  }
+
+  .register {
+    width: 90%;
+  }
+  .add-input {
+    font-size: 4vw;
+  }
+
+  .contact-info {
+    font-size: 3vw;
+  }
+  .contact-info div {
+    font-size: 4vw;
+  }
+  .su-divider hr {
+    width: 25%;
+    height: 2px;
+  }
+
+  .register-container h5 {
+    font-size: 5vw;
+  }
+}
+
+/* Media for small laptops */
+@media only screen and (max-width: 1440px) {
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1820px) {
+  .qry-img img {
+    margin-right: 20px !important;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

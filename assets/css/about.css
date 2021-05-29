@@ -1,0 +1,330 @@
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url("../fonts/ProximaNovaRegular.otf");
+}
+
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../fonts/AvenirNextBold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../fonts/AvenirNextDemi.otf");
+}
+
+.intro-div {
+  height: 80vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("/assets/images/about-us\ banner.jpg");
+  background-size: cover;
+  background-position: 0px 60%;
+  background-repeat: no-repeat;
+}
+.intro-div h1 {
+  text-align: center;
+  font: Bold 64px Avenir-Next;
+  color: #ffffff;
+  padding-top: 15vh;
+  margin-top: 0;
+}
+.about-edu {
+  width: 80%;
+  position: absolute;
+  padding-bottom: 15vh;
+  padding-top: 5vh;
+  margin-top: -19% !important;
+  box-shadow: 6px 6px 25px #00000029;
+  border-radius: 54px;
+  margin: auto;
+  background-color: #ffffff;
+}
+.about-edu h1 {
+  text-align: center;
+  font: Bold 64px Avenir-Next;
+  color: #408cff;
+}
+.about-edu-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 8vh;
+}
+.about-edu-written {
+  width: 40%;
+}
+.about-edu-written p {
+  text-align: left;
+  font: 22px Proxima-Nova;
+  color: #232323d6;
+}
+.about-edu-illust {
+  justify-content: center;
+  width: 40%;
+  align-items: center;
+}
+.about-edu-illust h4 {
+  font: 34px Proxima-Nova;
+  margin-top: 25%;
+  color: #4e4e4e;
+  text-align: center;
+}
+.our-mission {
+  margin-top: 30vh !important;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.our-mission h1 {
+  font-size: 72px;
+  font-weight: bold;
+  font-family: Avenir-Next;
+  text-align: center;
+  color: #408cff;
+  margin-top: 0;
+}
+.our-mission-block {
+  display: flex;
+  margin: 5vh auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.our-mission-illust {
+  font: 22px Proxima-Nova;
+  color: #4e4e4e;
+  width: 30%;
+}
+.our-mission-para {
+  font: 22px Proxima-Nova;
+  color: #232323d6;
+  width: 55%;
+}
+
+.our-mission-imgs {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.our-mission-imgs img {
+  height: 170px;
+  width: 170px;
+}
+
+.our-mission-imgs div {
+  text-align: center;
+  align-items: center;
+  color: #3957ed;
+  font: 31px Proxima-Nova;
+}
+.student-get {
+  width: 100%;
+  margin-top: 9vh;
+}
+
+.student-get h1 {
+  text-align: center;
+  font: Bold 72px Avenir-Next;
+  color: #408cff;
+}
+
+.student-get p {
+  width: 64%;
+  margin: auto;
+  text-align: center;
+  font: 28px Avenir-Next;
+  color: #464646d6;
+}
+
+.student-get-block {
+  width: 80%;
+  margin: 10vh auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.student-get-content {
+  width: 45%;
+  text-align: center;
+}
+.student-get-content img {
+  height: 16vh;
+}
+
+.student-get-content h4 {
+  font: Bold 28px Proxima-Nova;
+  color: #0065ff;
+  margin: 2vh 0;
+}
+
+.student-get-content p {
+  font: 24px Proxima-Nova;
+  color: black;
+}
+
+/* recent developments */
+
+.rec_dvlpmnts {
+  height: 80vh;
+  margin: 100px 0;
+}
+
+.rec_dvlpmnts h1 {
+  text-align: center;
+  font: Bold 72px Avenir-Next;
+  color: #408cff;
+}
+
+.rd_contain {
+  position: relative;
+  width: 60%;
+  height: 600px;
+  margin: 100px auto;
+  background-image: linear-gradient(#0000002b, #0000002b),
+    url("/assets/images/recent-developments.jpg");
+  background-size: cover;
+  border-radius: 54px;
+}
+
+.rd_pretext {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.6s;
+  position: absolute;
+  width: 60%;
+  left: 3%;
+  top: 40%;
+}
+
+.rd_hdline {
+  font: Bold 48px Avenir-Next;
+  color: #ffffff;
+}
+
+.rd_aftrtexthead {
+  font: bold 42px Avenir-Next;
+}
+
+.rd_cbtn {
+  box-shadow: 6px 6px 20px #00000029;
+  background-color: #ffffff;
+  border-radius: 50px;
+  height: 6vh;
+  width: 30%;
+  color: #000000d6;
+  font: Bold 16px Avenir-Next;
+}
+
+.rd_aftrtext {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s;
+  position: absolute;
+  padding: 0 30px;
+  border-radius: 54px;
+  height: 0%;
+  width: 0%;
+  top: 100%;
+  background-color: #00000096;
+}
+
+.rd_aftrtext p {
+  color: #ffffffd6;
+  font: 22px Proxima-Nova;
+}
+
+/* recent developments  */
+
+.our-team {
+  width: 100%;
+}
+.our-team h1 {
+  color: #0065ff;
+  text-align: center;
+  font: Bold 72px Avenir-Next;
+}
+.our-team-row {
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  margin: 2vh auto;
+  justify-content: center;
+}
+.team-member {
+  height: 45vh;
+  width: 20%;
+  margin: 0 2vh;
+}
+.member-img {
+  width: 25vh;
+  height: 25vh;
+  background-color: darkorange;
+  border-radius: 50vh;
+  margin: 2vw auto;
+}
+.team-member h3 {
+  color: #4e4e4e;
+  font: Bold 34px Proxima-Nova;
+  text-align: center;
+  margin: 1vh;
+}
+.team-member h4 {
+  color: #4e4e4e;
+  font: 34px Proxima-Nova;
+  text-align: center;
+  margin: 1vh;
+}
+.edu-news h1 {
+  font: Bold 72px Avenir-Next;
+  text-align: center;
+  color: #0065ff;
+}
+.edu-story {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 15vh auto;
+}
+.edu-story2 h4 {
+  font: Bold 32px Avenir-Next;
+  color: #000000d6;
+  margin-top: 7.5vh;
+  margin-bottom: 0;
+}
+.edu-story2 {
+  width: 28.5%;
+  padding-left: 1.5%;
+  box-shadow: 6px 6px 15px #00000033;
+  border-radius: 34px;
+}
+.edu-story2:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.edu-story2 p {
+  font: 22px Avenir-Next;
+  color: #000000d6;
+  width: 75%;
+}
+
+#edu-by2 {
+  margin-top: 7.5vh;
+}
+.edu-story2 button {
+  box-shadow: 6px 6px 20px #00000029;
+  margin-left: 45%;
+  height: 5vh;
+  padding: 0;
+  margin-bottom: 3.1vh;
+  border-radius: 25px;
+  width: 9vw;
+  background-color: #fff;
+  font: Bold 13px Avenir-Next;
+  color: #000000d6;
+}
