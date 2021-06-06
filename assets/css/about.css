@@ -13,231 +13,54 @@
   src: url("../fonts/AvenirNextDemi.otf");
 }
 
-.intro-div {
-  height: 80vh;
-  width: 100%;
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.25)
-    ),
-    url("/assets/images/about-us\ banner.jpg");
-  background-size: cover;
-  background-position: 0px 60%;
-  background-repeat: no-repeat;
-}
-.intro-div h1 {
-  text-align: center;
-  font: Bold 64px Avenir-Next;
-  color: #ffffff;
-  padding-top: 15vh;
-  margin-top: 0;
-}
-.about-edu {
-  width: 80%;
-  position: absolute;
-  padding-bottom: 15vh;
-  padding-top: 5vh;
-  margin-top: -19% !important;
-  box-shadow: 6px 6px 25px #00000029;
-  border-radius: 54px;
-  margin: auto;
-  background-color: #ffffff;
-}
-.about-edu h1 {
-  text-align: center;
-  font: Bold 64px Avenir-Next;
-  color: #408cff;
-}
-.about-edu-block {
-  display: flex;
-  justify-content: center;
-  margin-top: 8vh;
-}
-.about-edu-written {
-  width: 40%;
-}
-.about-edu-written p {
-  text-align: left;
-  font: 22px Proxima-Nova;
-  color: #232323d6;
-}
-.about-edu-illust {
-  justify-content: center;
-  width: 40%;
-  align-items: center;
-}
-.about-edu-illust h4 {
-  font: 34px Proxima-Nova;
-  margin-top: 25%;
-  color: #4e4e4e;
-  text-align: center;
-}
-.our-mission {
-  margin-top: 30vh !important;
+.about-us {
+  margin-top: 15vh !important;
   width: 100%;
   position: relative;
-  margin: auto;
 }
-.our-mission h1 {
+.about-us h1 {
   font-size: 72px;
   font-weight: bold;
   font-family: Avenir-Next;
   text-align: center;
   color: #408cff;
   margin-top: 0;
+  margin-bottom: 0;
 }
-.our-mission-block {
+.about-us-block {
   display: flex;
   margin: 5vh auto;
   justify-content: space-around;
   align-items: center;
 }
-.our-mission-illust {
+.about-us-illust {
   font: 22px Proxima-Nova;
   color: #4e4e4e;
-  width: 30%;
+  width: 40%;
 }
-.our-mission-para {
-  font: 22px Proxima-Nova;
+.about-us-para {
+  font: 45px Proxima-Nova;
   color: #232323d6;
   width: 55%;
 }
 
-.our-mission-imgs {
+.about-us-imgs {
   width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-.our-mission-imgs img {
+.about-us-imgs img {
   height: 170px;
   width: 170px;
 }
 
-.our-mission-imgs div {
+.about-us-imgs div {
   text-align: center;
   align-items: center;
   color: #3957ed;
   font: 31px Proxima-Nova;
 }
-.student-get {
-  width: 100%;
-  margin-top: 9vh;
-}
-
-.student-get h1 {
-  text-align: center;
-  font: Bold 72px Avenir-Next;
-  color: #408cff;
-}
-
-.student-get p {
-  width: 64%;
-  margin: auto;
-  text-align: center;
-  font: 28px Avenir-Next;
-  color: #464646d6;
-}
-
-.student-get-block {
-  width: 80%;
-  margin: 10vh auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.student-get-content {
-  width: 45%;
-  text-align: center;
-}
-.student-get-content img {
-  height: 16vh;
-}
-
-.student-get-content h4 {
-  font: Bold 28px Proxima-Nova;
-  color: #0065ff;
-  margin: 2vh 0;
-}
-
-.student-get-content p {
-  font: 24px Proxima-Nova;
-  color: black;
-}
-
-/* recent developments */
-
-.rec_dvlpmnts {
-  height: 80vh;
-  margin: 100px 0;
-}
-
-.rec_dvlpmnts h1 {
-  text-align: center;
-  font: Bold 72px Avenir-Next;
-  color: #408cff;
-}
-
-.rd_contain {
-  position: relative;
-  width: 60%;
-  height: 600px;
-  margin: 100px auto;
-  background-image: linear-gradient(#0000002b, #0000002b),
-    url("/assets/images/recent-developments.jpg");
-  background-size: cover;
-  border-radius: 54px;
-}
-
-.rd_pretext {
-  visibility: visible;
-  opacity: 1;
-  transition: 0.6s;
-  position: absolute;
-  width: 60%;
-  left: 3%;
-  top: 40%;
-}
-
-.rd_hdline {
-  font: Bold 48px Avenir-Next;
-  color: #ffffff;
-}
-
-.rd_aftrtexthead {
-  font: bold 42px Avenir-Next;
-}
-
-.rd_cbtn {
-  box-shadow: 6px 6px 20px #00000029;
-  background-color: #ffffff;
-  border-radius: 50px;
-  height: 6vh;
-  width: 30%;
-  color: #000000d6;
-  font: Bold 16px Avenir-Next;
-}
-
-.rd_aftrtext {
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.6s;
-  position: absolute;
-  padding: 0 30px;
-  border-radius: 54px;
-  height: 0%;
-  width: 0%;
-  top: 100%;
-  background-color: #00000096;
-}
-
-.rd_aftrtext p {
-  color: #ffffffd6;
-  font: 22px Proxima-Nova;
-}
-
-/* recent developments  */
 
 .our-team {
   width: 100%;
@@ -277,7 +100,7 @@
   font: 34px Proxima-Nova;
   text-align: center;
   margin: 1vh;
-}
+} /* 
 .edu-news h1 {
   font: Bold 72px Avenir-Next;
   text-align: center;
@@ -328,3 +151,4 @@
   font: Bold 13px Avenir-Next;
   color: #000000d6;
 }
+ */

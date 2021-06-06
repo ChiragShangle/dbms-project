@@ -1,5 +1,41 @@
 /* HOME - 1920px start */
+body {
+  margin: 0;
+  padding: 0;
+}
+.home-sign input {
+  height: 3vh;
+  font-size: medium;
+  width: 8vw;
+}
+.home-sign button {
+  height: 4vh;
+  font-size: medium;
+  font-weight: bolder;
+  width: 8vw;
+  border: 2px solid #707070;
+  border-radius: 9px;
+  color: #000000e8;
+  padding-left: 5%;
+  background-color: #408cff;
+}
 
+#cntrl_img {
+  margin-top: 2vh;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28vw;
+}
+#cntrl_img a {
+  color: #408cff;
+}
+.home-sign {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 /* SKILL SECTION */
 .get-skills {
   text-align: center;
@@ -11,9 +47,9 @@
 }
 
 .get-skills-heading {
-  font: Bold 83px Avenir-Next;
-  line-height: 93px;
-  width: 60%;
+  font: Bold 60px Avenir-Next;
+  line-height: 75px;
+  width: 55%;
   color: #408cff;
 }
 
@@ -26,7 +62,7 @@
 }
 
 .skill-illustrate {
-  height: 80%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,9 +92,9 @@
   color: #464646d6;
 }
 /* SKILL SECTION */
-
+/* 
 /* OUR PROGRAMS */
-.our-programs {
+/* .our-programs {
   margin-top: 200px;
   min-height: 100vh;
   text-align: center;
@@ -126,7 +162,7 @@
 /* OUR PROGRAMS */
 
 /* SUN BURN */
-.sun-burn {
+/* .sun-burn {
   margin: 200px 0;
 }
 
@@ -175,11 +211,11 @@
 
 .success-flame img {
   margin-top: -20px;
-}
+}  */
 /* SUN BURN */
 
 /* INTERNSHIP OPPORTUNITY */
-.intern-opt {
+/* .intern-opt {
   margin: 200px 0;
   height: 100vh;
   display: flex;
@@ -228,11 +264,11 @@
 #AmazonLogo {
   transform: scale(0.8);
   margin-bottom: -30px;
-}
+} */
 /* INTERNSHIP OPPORTUNITY */
 
 /* BLOGS - 1920px START */
-.blogs-brief {
+/* .blogs-brief {
   padding: 90px 0;
   margin-bottom: 200px;
   border-radius: 114px;
@@ -325,7 +361,7 @@
   text-align: center;
   font: Bold 24px Avenir-Next;
   color: black;
-}
+}  */
 /* BLOGS - 1920px END */
 
 @media only screen and (max-width: 480px) {

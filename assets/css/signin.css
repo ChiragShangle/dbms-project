@@ -1,7 +1,25 @@
 /* SIGN_IN - 1920px START */
+
+.title {
+  background-color: white;
+  height: 6vh;
+  box-shadow: 6px 6px 20px #00000029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title a img {
+  height: 4vh;
+}
+.bgimg {
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/images/background.jpg");
+}
 .signin-parent {
-  margin: 80px auto;
-  width: 42%;
+  width: 40%;
   height: 60vh;
   background: white;
   box-shadow: 6px 6px 25px #00000029;
@@ -11,7 +29,7 @@
   justify-content: space-evenly;
 }
 
-.signin-parent input[type="text"],
+.signin-parent input[type="number"],
 input[type="password"] {
   margin: 30px auto;
   padding-left: 20px;
@@ -27,7 +45,7 @@ input[type="password"] {
   width: 80%;
   margin: 0 auto;
   padding-top: 35px;
-  font: Bold 71px Avenir-Next;
+  font: Bold 60px Avenir-Next;
   color: #408cff;
 }
 
@@ -57,6 +75,7 @@ input[type="password"] {
 
 .signin-btn {
   margin: auto;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,47 +88,6 @@ input[type="password"] {
   font: Bold 21px Product-Sans;
   color: #ffffff;
 }
-.signin-banner {
-  margin: auto;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-}
-.banner-line {
-  margin-top: 12px;
-  height: 2px;
-  width: 160px;
-  background-color: black;
-  opacity: 0.7;
-}
-.banner-text {
-  font: Bold 20px Proxima-Nova;
-  color: black;
-  opacity: 0.7;
-  text-align: center;
-}
-
-.signin-social-med {
-  margin: auto;
-  width: 40%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.signin-acc {
-  margin: auto;
-  text-align: center;
-  height: 37px;
-  font: 25px Proxima-Nova;
-  color: #0058dd;
-}
-.r-role {
-  display: flex0;
-  justify-content: space-between;
-  align-items: center;
-}
-/* SIGN_IN - 1920px END */
-/*  PAGE STARTING --------------------------------- -480px-------------------------------- */
 @media screen and (max-width: 480px) {
   .signin-parent {
     width: 90%;

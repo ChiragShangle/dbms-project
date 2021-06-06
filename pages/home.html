@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/Home.css" />
-    <link rel="stylesheet" href="./assets/css/about.css" />
-    <link rel="stylesheet" href="./assets/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/signin.css">
-    <link rel="stylesheet" href="./assets/css/newchirag.css">
-    <title>Edudictive - Home</title>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/Home.css" />
+    <link rel="stylesheet" href="../assets/css/about.css" />
+    <link rel="stylesheet" href="../assets/css/newchirag.css">
+    <title>Home</title>
   </head>
   <body>
     <header id="Head">
@@ -17,7 +15,7 @@
     
             <div class="logo-container">
                 <a href="./home.html">
-                <img src="./assets/images/download.png" class="LogoOnly" alt="Edudictive Logo">
+                <img src="../assets/images/download.png" class="LogoOnly" alt="Edudictive Logo">
                 </a>
             </div>
             <nav class="header-menu">
@@ -27,38 +25,21 @@
                      <li onclick="ScrollHandler('.qry-heading')">CONTACT US</li>
                 </ul>
             </nav>
-
-    
-            <div class="user-cntr_pane">
-                <div id="cntrl_img" onclick="acccontrol()"><img src="./assets/images/svgs/account.svg"></div>
-                <div class="cntrl_sett">
-                    <div class="cntrl_links">
-                        <div class="cntrl_lhead">Hey user !</div>
-                        <div class="cntrl_lcontain">
-                            <ul>
-                                <li><a href="./user/dashboard">My Profile</a></li>
-                                <li><a href="./user/">My Courses</a></li>
-                                <li><a href="./user/">My Projects</a></li>
-                                <li onclick="ScrollHandler('.about-us')"> <div>   ABOUT US</div></li>
-                                <li onclick="ScrollHandler('.qry-heading')">CONTACT US</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="cntrl_buttons">
-                        <div class="sh_cntrl_txt">
-                            <div class="empty_container">unknown</div>
-                            <span>Sign in to continue</span>
-                        </div>
-                        <div class="cntrl_btncontain">
-                            <button class="log-in"><a href="login.html"> Sign in</a></button>
-                            <button class="sign-up" > <a href="register.html"> Create new account</a></button>
-                        </div>
-                    </div>
+                <div id="cntrl_img" >
+                <form class="home-sign">
+                  <input
+                     type="number"
+                     placeholder="Roll-Number"
+                     name="urollno"
+                    autofocus
+                  />
+                  <input type="password" placeholder="Password" name="uPass" />
+      
+                  <button>Sign in</button>
+                </form>  
+                <p>Not yet registered?<a href="./register.html">click here</a></p>
                 </div>
-            </div>
-            
-            <!-- user control nav bar -->
-            
+                
          </div>
     </header>
     
@@ -72,20 +53,23 @@
         <div class="get-skills-platform">
           We are here to make your future bright !!!
         </div>
-        <div class="skill-illustrate"><img src="./assets/images/flame.png" alt=""></div>
+        <div class="skill-illustrate"><img src="../assets/images/flame.png" alt=""></div>
         <div class="skill-handle">
-          <button id="skill-register" >
-            <a href="register.html"> Register </a>
+          <a href="./register.html"> 
+            <button id="skill-register" >
+            Register
           </button>
-          <button id="skill-offers"><a href="login.html"> Login</a></button>
+        </a>
+        <a href="./login.html">
+          <button id="skill-offers"> Login</button>
+        </a>
         </div>
       </div>
-      <div class="about-us">
-        <div class="our-mission">
+        <div class="about-us">
             <h1>About Us</h1>
-            <div class="our-mission-block">
-              <div class="our-mission-illust">Illustration required here</div>
-              <p class="our-mission-para">
+            <div class="about-us-block">
+              <div class="about-us-illust">Illustration required here</div>
+              <p class="about-us-para">
                 TNP Portal is a platform which aims for the bright and secure future of under graduate students of 
                 MAIT. Here, students of MAIT can register to keep themselves updated about the Placements of the
                  Institute. They can get information about past placements as well as upcoming companies through the 
@@ -93,23 +77,23 @@
                 
               </p>
             </div>
-            <div class="our-mission-imgs">
+            <div class="about-us-imgs">
               <div>
-                <img src="./assets/images/svgs/lecture.svg" alt="" />
+                <img src="../assets/images/svgs/lecture.svg" alt="" />
                 <div>
                   Proper Guidance <br />
                   for Placements
                 </div>
               </div>
               <div>
-                <img src="./assets/images/svgs/raise-hand.svg" alt="" />
+                <img src="../assets/images/svgs/raise-hand.svg" alt="" />
                 <div>
                   150+ students <br />
                   Placed
                 </div>
               </div>
               <div>
-                <img src="./assets/images/svgs/faculty.svg" alt="" />
+                <img src="../assets/images/svgs/faculty.svg" alt="" />
                 <div>
                   50+ Companies <br />
                   for students
@@ -126,18 +110,18 @@
               </div>
               <div class="team-member">
                 <div class="member-img"></div>
-                <h3>Swastik Jain</h3>
+                <h3>Chirag Shangle</h3>
               </div>
               <div class="team-member">
                 <div class="member-img"></div>
-                <h3>Chirag Shangle</h3>
+                <h3>Swastik Jain</h3>
               </div>
             </div>
           </div>
             <h1 class="qry-heading">In case of queries, contact us</h1>
                 <div class="qry-content">
                   <div class="qry-img">
-                    <img src="./assets/images/query.png" alt="" />
+                    <img src="../assets/images/query.png" alt="" />
                   </div>
                   <form class="contact" id ="contactForm">
                     <div class="qry-enter-data">
@@ -156,10 +140,9 @@
         <div class="f-container">
           <div class="top-container">
             <div class="insidef-container f-logo">
-              <a><img src="./assets/images/icons/Logo.png" /></a>
+              <a><img src="../assets/images/download.png" /></a>
               <br />
-              <a href="#"><img src="./assets/images/icons/Logo Font only.png" /></a>
-            </div>
+              </div>
             <div class="responsive-task">
               <div class="insidef-container about">
                 <h4>About Us</h4>
@@ -204,18 +187,14 @@
           <div class="connect">
             <h4>Connect with us on</h4>
             <div class="social">
-              <a href="#"><img src="./assets/images/svgs/linkedin.svg" /></a>
+              <a href="#"><img src="../assets/images/svgs/linkedin.svg" /></a>
             </div>
-            <p>Illustrations by icon8.com</p>
-            <p>2020 Anything by zero. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
       
 
-    <script src="./assets/scripts/index.js"></script>
-    <script src="./assets/scripts/Home.js"></script>
-    <script src="./assets/scripts/newchirag.js"></script>
+    <script src="../assets/scripts/Home.js"></script>
 
 </body>
 </html>
