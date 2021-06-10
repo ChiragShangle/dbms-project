@@ -1,3 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    
+    @font-face {
+      font-family: "Proxima-Nova";
+      src: url("../static/fonts/ProximaNovaRegular.otf");
+    }
+    
+    @font-face {
+      font-family: "Avenir-Next";
+      src: url("../static/fonts/AvenirNextBold.otf");
+      font-weight: Bold;
+    }
+    @font-face {
+      font-family: "Avenir-Next";
+      src: url("../static/fonts/AvenirNextRegular.otf");
+    }  
+      
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+}
+a {
+  color: #000000;
+}
+
+/* COMMON */
+button {
+  transition: 0.2s;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+input,
+select {
+  outline: none;
+  border: 2px solid #707070;
+  border-radius: 9px;
+  color: #000000e8;
+  padding-left: 5%;
+  background-color: white;
+}
+
+input:focus,
+select:focus {
+  border-color: #418afa !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* 
+signup.css */
 /*  -------------------------------------*/
 .title {
   background-color: white;
@@ -24,7 +93,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/assets/images/background.jpg");
+  background-image: url("/static/images/background.jpg");
 }
 .register-container {
   width: 30%;
@@ -305,3 +374,102 @@
     max-height: 100%;
   }
 }
+
+    </style>
+    <title>Register</title>
+  </head>
+  <body>
+ <div class="bgimg" style="height: 100vh;">
+     <div class="back-btn">
+     <a href="./home.html"><i class="fas fa-arrow-left"></i>BACK</a>
+    </div>
+     <div class="register-container" >
+      <h1>Edit Your Details</h1>
+      <form method="POST" id="user-register-form" class="register">
+        <div class="input-flexer">
+          <input
+            type="text"
+            name="ufName"
+            placeholder="First Name"
+            class="add-input"
+            required
+          />
+          <input
+            type="text"
+            name="ulName"
+            placeholder="Last Name"
+            class="add-input"
+            required
+          />
+       </div>
+          <input
+          class="add-input"
+          type="email"
+          name="uEmail"
+          placeholder="Email address"
+          required
+        />
+        <input 
+        placeholder = "Date Of Birth" 
+        class = "textbox-n add-input"
+        type = "text" 
+        onfocus = "(this.type = 'date')" 
+        />
+        <input
+          class="add-input"
+          type="password"
+          name="uPass"
+          placeholder="Password"
+          required
+        />
+
+        <input
+          class="add-input"
+          type="password"
+          name="ucPass"
+          placeholder="Confirm Password"
+          required
+        />
+        <div class="skills">
+            <input type="text" class="add-input" placeholder="Skills" required>
+          
+            <div style="display: none" class="added">
+              <input type="text" class="add-input" placeholder="Skills">
+            </div>      
+            <div style="display: none" class="added">
+             <input type="text" class="add-input" placeholder="Skills">
+            </div>
+            <div style="display: none" class="added">
+              <input type="text" class="add-input" placeholder="Skills">
+            </div>
+            <div style="display: none" class="added">
+              <input type="text" class="add-input" placeholder="Skills">
+            </div>  
+            <button type="button" value="On" onclick="addskill()" style="margin-top: 2vh;">Add skill</button>
+              </div>
+        
+        <div class="input-flexer">
+          <div class="contact-info">
+            <div class="dial">+91</div>
+            <input
+              type="number"
+              name="upNum"
+              placeholder="Contact Number"
+              required
+              id="cont-pad"
+            />
+          </div>
+        </div>
+        <button type="submit">Update</button>
+      </form>
+    </div>
+      <script>
+        i = 0;
+                          var x = document.getElementsByClassName("added");
+                            function addskill(){
+                                  x[i].style.display = "block";
+                                  i++;
+                                document.getElementById("remove").style.display = "inline";
+                            }</script>
+  </body>
+</html>

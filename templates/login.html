@@ -1,3 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @font-face {
+      font-family: "Proxima-Nova";
+      src: url("../static/fonts/ProximaNovaRegular.otf");
+    }
+    
+    @font-face {
+      font-family: "Avenir-Next";
+      src: url("../static/fonts/AvenirNextBold.otf");
+      font-weight: Bold;
+    }
+    @font-face {
+      font-family: "Avenir-Next";
+      src: url("../static/fonts/AvenirNextRegular.otf");
+    }  
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus,
+select:focus {
+  border-color: #418afa !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+}
+a {
+  color: #000000;
+}
+
+/* COMMON */
+button {
+  transition: 0.2s;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+input,
+select {
+  outline: none;
+  border: 2px solid #707070;
+  border-radius: 9px;
+  color: #000000e8;
+  padding-left: 5%;
+  background-color: white;
+}
+
+input:focus,
+select:focus {
+  border-color: #418afa !important;
+}
+
+a {
+  text-decoration: none;
+}/* 
+signin.css */
 /* SIGN_IN - 1920px START */
 
 .title {
@@ -16,7 +96,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/assets/images/background.jpg");
+  background-image: url("/static/images/background.jpg");
 }
 .signin-parent {
   width: 40%;
@@ -184,6 +264,25 @@ input[type="password"] {
   }
 }
 
-/* Media for small laptops */
-@media only screen and (max-width: 1440px) {
-}
+    </style>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="title"><a href="./home.html"><img src="../static/images/download.png" alt=""></a></div>   
+  <div class="bgimg">   
+    <form class="signin-parent" id="user-login-form">
+      <h1 class="sign-heading">Sign in</h1>
+      <input
+        type="number"
+        placeholder="Roll-Number"
+        name="uEmail"
+        autofocus
+      />
+      <input type="password" placeholder="Password" name="uPass" />
+      
+      <button class="signin-btn" type="submit">Sign in</button>
+
+    </form>
+    </div>  
+  </body>
+</html>

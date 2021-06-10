@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style>
+      @font-face {
+      font-family: "Proxima-Nova";
+      src: url("../static/fonts/ProximaNovaRegular.otf");
+    }
+    
+    @font-face {
+      font-family: "Avenir-Next";
+      src: url("../static/fonts/AvenirNextBold.otf");
+      font-weight: Bold;
+    }
+    @font-face {
+      font-family: "Avenir-Next";
+      src: url("../static/fonts/AvenirNextRegular.otf");
+    }
+    
+button {
+  transition: 0.2s;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Custom Checkbox */
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Custom Checkbox */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-wrap {
+  margin: 0 auto;
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select {
+  outline: none;
+  border: 2px solid #707070;
+  border-radius: 9px;
+  color: #000000e8;
+  padding-left: 5%;
+  background-color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus,
+select:focus {
+  border-color: #418afa !important;
+}
+
+/* social login buttons */
+
+/* 
+header */
+#Head {
+  width: 100%;
+  height: 125px;
+  background-color: white;
+  box-shadow: 0px 10px 61px #00000017;
+}
+
+#Head * {
+  display: flex;
+  align-items: center;
+}
+
+.sub-head {
+  justify-content: space-evenly;
+  margin: auto;
+  height: 125px;
+  width: 100%;
+  position: relative;
+}
+
+.logo-container {
+  justify-content: center;
+}
+
+.logo-container a {
+  justify-content: center;
+}
+
+.LogoOnly {
+  width: 200px;
+  height: 53px;
+  margin-right: 10px;
+}
+
+.LogoFont {
+  width: 184px;
+  height: 36px;
+}
+
+.header-menu {
+  font: Bold 18px Proxima-Nova;
+  width: 25%;
+}
+
+.header-menu ul li {
+  cursor: pointer;
+  margin-right: 40px;
+  height: 22px;
+  color: black;
+}
+.header-menu ul li a {
+  color: black;
+}
+
+
+      .contact-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.qry-heading {
+  text-align: center;
+  font: bold 71px Avenir-Next;
+  color: #6a11cb;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+}
+.qry-img {
+  width: 50%;
+}
+.qry-img img {
+  width: 100%;
+}
+.qry-content {
+  width: 82%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10vh;
+}
+.contact {
+  width: 45%;
+}
+.qry-data {
+  font: 20px Proxima-Nova;
+  width: 95%;
+  margin-top: 34px;
+  height: 64px;
+  color: #000000e8;
+  opacity: 0.7;
+  background: #ffffffe8;
+  border: 2px solid #707070;
+  border-radius: 9px;
+  padding-left: 22px;
+}
+.qry-contact div {
+  font: 20px Proxima-Nova;
+}
+.qry-role select {
+  width: 35%;
+  border: 2px solid #707070;
+  border-radius: 9px;
+  padding-left: 5%;
+  color: #000000e8;
+  opacity: 0.7;
+  align-items: center;
+  font: Bold 20px Proxima-Nova;
+  background-color: #ffffff;
+}
+.qry-contact {
+  display: flex;
+  justify-content: center;
+  /* width: 55%;*/
+  width: 60%;
+  border: 2px solid #707070;
+  border-radius: 9px;
+  font-size: 20px;
+  color: #000000e8;
+  opacity: 0.7;
+  align-items: center;
+}
+
+.qry-contact input {
+  border: none;
+  padding-left: 5px;
+  color: #000000e8;
+  opacity: 0.7;
+  font: Bold 20px Proxima-Nova;
+}
+
+.qry-role {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34px;
+  height: 64px;
+  width: 100%;
+}
+
+.qry-submit {
+  margin-top: 34px;
+  height: 64px;
+  width: 100%;
+  font: Bold 21px Product-Sans;
+  color: #ffffff;
+  background: #00dc67;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+}
+/* 
+footer */
+footer {
+  box-shadow: 0px -32px 99px #00000014;
+  width: 100%;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer h4 {
+  font: Bold 28px Proxima-Nova;
+  color: #4e4e4e;
+}
+
+.f-container {
+  width: 80%;
+  margin: auto;
+}
+
+.top-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.insidef-container {
+  width: 18%;
+  text-align: left;
+}
+
+.f-logo {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.insidef-container a img {
+  width: 100%;
+}
+.insidef-container ul a li {
+  font-family: "ProximaNovaThin";
+  line-height: 1.5rem;
+  font-size: 18px;
+}
+.insidef-container ul a li:hover {
+  text-decoration: underline;
+}
+.insidef-container ul a {
+  text-decoration: none;
+  color: #4e4e4e;
+}
+
+.social {
+  display: flex;
+}
+
+.connect {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect p {
+  margin: 5px;
+}
+
+.social img {
+  margin: 20px;
+}
+.responsive-task {
+  display: flex;
+  width: 32%;
+  justify-content: space-around;
+}
+.quick-links {
+  width: 50%;
+}
+.about {
+  width: 50%;
+}
+.recent-updates {
+  margin-bottom: 55px;
+}
+
+
+      html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+}
+a {
+  color: #000000;
+}
+/* COMMON */
+button {
+  transition: 0.2s;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+    /* about.css */
+    
+    .about-us {
+      margin-top: 15vh !important;
+      width: 100%;
+      position: relative;
+    }
+    .about-us h1 {
+      font-size: 72px;
+      font-weight: bold;
+      font-family: Avenir-Next;
+      text-align: center;
+      color: #408cff;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .about-us-block {
+      display: flex;
+      margin: 5vh auto;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .about-us-illust {
+      font: 22px Proxima-Nova;
+      color: #4e4e4e;
+      width: 40%;
+    }
+    .about-us-illust img{
+    width: 100%;
+    object-fit:cover;
+    }
+    .about-us-para {
+      font: 45px Proxima-Nova;
+      color: #232323d6;
+      width: 55%;
+    }
+    
+    .about-us-imgs {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .about-us-imgs img {
+      height: 170px;
+      width: 170px;
+    }
+    
+    .about-us-imgs div {
+      text-align: center;
+      align-items: center;
+      color: #3957ed;
+      font: 31px Proxima-Nova;
+    }
+    
+    .our-team {
+      width: 100%;
+    }
+    .our-team h1 {
+      color: #0065ff;
+      text-align: center;
+      font: Bold 72px Avenir-Next;
+    }
+    .our-team-row {
+      display: flex;
+      width: 95%;
+      flex-wrap: wrap;
+      margin: 2vh auto;
+      justify-content: center;
+    }
+    .team-member {
+      height: 45vh;
+      width: 20%;
+      margin: 0 2vh;
+    }
+    .member-img {
+      width: 25vh;
+      height: 25vh;
+      background-color: darkorange;
+      border-radius: 50vh;
+      margin: 2vw auto;
+    }
+    .team-member h3 {
+      color: #4e4e4e;
+      font: Bold 34px Proxima-Nova;
+      text-align: center;
+      margin: 1vh;
+    }
+    .team-member h4 {
+      color: #4e4e4e;
+      font: 34px Proxima-Nova;
+      text-align: center;
+      margin: 1vh;
+    }
+/* home.css */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .home-sign input {
+      height: 3vh;
+      font-size: medium;
+      width: 8vw;
+    }
+    .home-sign button {
+      height: 4vh;
+      font-size: medium;
+      font-weight: bolder;
+      width: 8vw;
+      border: 2px solid #707070;
+      border-radius: 9px;
+      color: #000000e8;
+      padding-left: 5%;
+      background-color: #408cff;
+    }
+    
+    #cntrl_img {
+      margin-top: 2vh;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 28vw;
+    }
+    #cntrl_img a {
+      color: #408cff;
+    }
+    .home-sign {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    /* SKILL SECTION */
+    .get-skills {
+      text-align: center;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: calc(100vh - 125px - 100px);
+    }
+    
+    .get-skills-heading {
+      font: Bold 60px Avenir-Next;
+      line-height: 75px;
+      width: 55%;
+      color: #408cff;
+    }
+    
+    .get-skills-platform {
+      margin-top: 18px;
+      width: 45%;
+      font: 28px Avenir-Next;
+      line-height: 36px;
+      color: #747474;
+    }
+    
+    .skill-illustrate {
+      height: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .skill-illustrate img {
+      height: 80%;
+    }
+    .skill-handle button {
+      width: 337px;
+      height: 82px;
+      border-radius: 15px;
+      font: Bold 22px Avenir-Next;
+      line-height: 14px;
+    }
+    
+    #skill-register {
+      background-color: #408cff;
+      color: #ffffff;
+      margin-right: 35px;
+    }
+    
+    #skill-offers {
+      margin-left: 35px;
+      background-color: #ffffff;
+      border: 3px solid #464646d6;
+      font: Bold 22px Avenir-Next;
+      color: #464646d6;
+    }</style>
+    <title>Home</title>
+  </head>
+  <body>
+    <header id="Head">
+        <div class="sub-head">
+    
+            <div class="logo-container">
+                <a href="./home.html">
+                <img src="../static/images/download.png" class="LogoOnly" alt="Edudictive Logo">
+                </a>
+            </div>
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="./home.html">HOME</a></li>
+                    <li onclick="ScrollHandler('.about-us')">ABOUT US</li>
+                     <li onclick="ScrollHandler('.qry-heading')">CONTACT US</li>
+                </ul>
+            </nav>
+                <div id="cntrl_img" >
+                <form class="home-sign">
+                  <input
+                     type="number"
+                     placeholder="Roll-Number"
+                     name="urollno"
+                    autofocus
+                  />
+                  <input type="password" placeholder="Password" name="uPass" />
+      
+                  <button>Sign in</button>
+                </form>  
+                <p>Not yet registered?<a href="./register.html">click here</a></p>
+                </div>
+                
+         </div>
+    </header>
+    
+    
+    <div class="content-wrap">
+      <!-- GET SKILLS -->
+      <div class="get-skills">
+        <div class="get-skills-heading">
+          Getting Placements has never been easier
+        </div>
+        <div class="get-skills-platform">
+          We are here to make your future bright !!!
+        </div>
+        <div class="skill-illustrate"><img src="../static/images/flame.png" alt=""></div>
+        <div class="skill-handle">
+          <a href="./register.html"> 
+            <button id="skill-register" >
+            Register
+          </button>
+        </a>
+        <a href="./login.html">
+          <button id="skill-offers"> Login</button>
+        </a>
+        </div>
+      </div>
+        <div class="about-us">
+            <h1>About Us</h1>
+            <div class="about-us-block">
+              <div class="about-us-illust"><img src="../static/images/about-us banner.jpg" alt=""></div>
+              <p class="about-us-para">
+                TNP Portal is a platform which aims for the bright and secure future of under graduate students of 
+                MAIT. Here, students of MAIT can register to keep themselves updated about the Placements of the
+                 Institute. They can get information about past placements as well as upcoming companies through the 
+                 portal.
+                
+              </p>
+            </div>
+            <div class="about-us-imgs">
+              <div>
+                <img src="../static/images/svgs/lecture.svg" alt="" />
+                <div>
+                  Proper Guidance <br />
+                  for Placements
+                </div>
+              </div>
+              <div>
+                <img src="../static/images/svgs/raise-hand.svg" alt="" />
+                <div>
+                  150+ students <br />
+                  Placed
+                </div>
+              </div>
+              <div>
+                <img src="../static/images/svgs/faculty.svg" alt="" />
+                <div>
+                  50+ Companies <br />
+                  for students
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="our-team">
+            <h1>Our Team</h1>
+            <div class="our-team-row">
+              <div class="team-member">
+                <div class="member-img"></div>
+                <h3>Suraj Mamgai</h3>
+              </div>
+              <div class="team-member">
+                <div class="member-img"></div>
+                <h3>Chirag Shangle</h3>
+              </div>
+              <div class="team-member">
+                <div class="member-img"></div>
+                <h3>Swastik Jain</h3>
+              </div>
+            </div>
+          </div>
+            <h1 class="qry-heading">In case of queries, contact us</h1>
+                <div class="qry-content">
+                  <div class="qry-img">
+                    <img src="../static/images/query.png" alt="" />
+                  </div>
+                  <form class="contact" id ="contactForm">
+                    <div class="qry-enter-data">
+                      <input type="text" class="qry-data" name ="name" placeholder="Full Name" />
+                      <input type="email" class="qry-data" name="email" placeholder="Email address" />
+                          <input type="tel" class="qry-data" name ="phoneNumber" placeholder="Contact Number" />
+                      </div> 
+                      <button type ="submit" class="qry-submit">Submit Details</button>
+                    </div>
+                  </form>
+                </div>
+              </div>    
+            </div>
+    </div>
+    <footer>
+        <div class="f-container">
+          <div class="top-container">
+            <div class="insidef-container f-logo">
+              <a><img src="../static/images/download.png" /></a>
+              <br />
+              </div>
+            <div class="responsive-task">
+              <div class="insidef-container about">
+                <h4>About Us</h4>
+                <ul>
+                  <a href="/about-us"><li>Introduction</li></a>
+                  <a href="./team"><li>Our Team</li></a>
+                  <a><li>Reviews</li></a>
+                  <a><li>Centers</li></a>
+                  <a href="./docs/brochures"> <li>Brochures</li></a>
+                  <a href="./request-session"><li>Request a session</li></a>
+                </ul>
+              </div>
+              <div class="insidef-container quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                  <a href="./programs/schools"><li>School Programs</li></a>
+                  <a href="./programs/colleges"><li>College Programs</li></a>
+                  <a href="./events"><li>Events</li></a>
+                  <a href="http://blogs.edudictive.in"><li>Blogs</li></a>
+                  <a href="./contact-us"><li>Contact Us</li></a>
+                </ul>
+              </div>
+            </div>
+            <div class="insidef-container popular-programs">
+              <h4>Popular Programs</h4>
+              <ul>
+                <a href="#"><li>Front-End Web Dev</li></a>
+                <a href="#"><li>DS & Algorithms in Java</li></a>
+                <a href="#"><li>Graphic Designing</li></a>
+                <a href="#"><li>Android Developement</li></a>
+                <a href="#"><li>UI/UX Designing</li></a>
+                <a href="#"><li>Content Writing</li></a>
+              </ul>
+            </div>
+            <div class="insidef-container recent-updates">
+              <h4>Recent Updates</h4>
+              <p>
+                Soon, we are going to expand our network in many other colleges of GGSIPU.
+              </p>
+            </div>
+          </div>
+          <div class="connect">
+            <h4>Connect with us on</h4>
+            <div class="social">
+              <a href="#"><img src="../static/images/svgs/linkedin.svg" /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+    <script>const ScrollHandler = (ElemID) => {
+      let elem = document.querySelector(ElemID);
+      console.log(elem);
+      elem.scrollIntoView();
+    };
+    
+                      </script>
+
+</body>
+</html>

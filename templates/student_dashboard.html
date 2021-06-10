@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scroll-behavior: smooth;
+}
+a {
+  color: #000000;
+}
+/* COMMON */
+button {
+  transition: 0.2s;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+    .det {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.chart {
+  display: flex;
+  justify-content: space-between;
+}
+.det1 {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+    .container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .courses {
+      margin-bottom: 100px;
+      position: relative;
+    }
+    
+    .courses h1 {
+      color: #6a11cb;
+      font: Bold 64px Avenir-Next;
+      padding-left: 20px;
+      box-sizing: border-box;
+      margin-bottom: 0;
+    }
+    
+    .crs_card_wrap {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 75px 0px 75px 15px;
+      scroll-behavior: smooth;
+    }
+    
+    .crs_card_wrap::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .crs_card {
+      width: 415px;
+      min-width: 415px;
+      border-radius: 30px;
+      transition: 0.2s;
+      margin: 0 20px;
+      box-shadow: 6px 6px 26px #00000059;
+      cursor: pointer;
+    }
+    
+    .crs_hig {
+      transform: scale(1.16);
+      margin-right: 60px;
+    }
+    
+    .crs_non_hig {
+      -webkit-filter: blur(2px);
+      -moz-filter: blur(2px);
+      -o-filter: blur(2px);
+      -ms-filter: blur(2px);
+      filter: blur(2px);
+      pointer-events: none;
+    }
+    
+    .crs_dte {
+      height: 42px;
+      width: 230px;
+      background-color: #408cff;
+      color: black;
+      font: 22px Avenir-Next;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+    
+    .crs_nme {
+      margin-top: 50px;
+      min-height: 140px;
+      padding: 0 30px;
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .crs_des {
+      color: black;
+      font: 36px Avenir-Next;
+      height: min-content;
+      margin: 0;
+    }
+    
+    .crs_tpe {
+      color: black;
+      font: 200 22px Avenir-Next;
+      margin: 15px 0;
+    }
+    .crs_expl {
+      display: flex;
+      align-items: center;
+      margin: 25px 0 35px 0;
+      justify-content: center;
+    }
+    
+    .crs_info,
+    .crs_rgstr {
+      height: 50px;
+      width: 160px;
+      border-radius: 50px;
+      margin: 0 10px;
+      font: 18px Avenir-Next;
+      transition: 0.2s;
+    }
+    
+    .crs_info {
+      background-color: #fff;
+      color: black;
+    }
+    
+    .crs_info:hover {
+      background-color: black;
+      color: #fff;
+    }
+    
+    .crs_rgstr {
+      background-color: #04d30c;
+      color: #fff;
+    }
+    
+    .crs_rgstr:hover {
+      background-color: #000000;
+      color: #04d30c;
+    }
+    
+    .sld_rgt,
+    .sld_lft {
+      height: 80px;
+      width: 80px;
+      border-radius: 80px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 100;
+      box-shadow: 6px 6px 27px #0000005c;
+      transition: 0.3s;
+    }
+    
+    .sld_rgt {
+      right: 50px;
+    }
+    
+    .sld_lft {
+      left: 50px;
+      transform: rotate(180deg);
+      display: none;
+    }
+    
+    .sld_lft:active {
+      transform: rotate(180deg) scale(0.95);
+    }
+    </style>
+    <title>Student-Dashboard</title>
+</head>
+<body>
+    <div class="container">
+    <h1>STUDENT NAME</h1>
+    <div class="det">
+        <h3>Roll_Numbe:-01614802719</h3>
+        <h3>Email:-abcdefghijklm@gmail.com</h3>
+    </div>
+        <div class="chart">
+            <div class="skill">
+                <h2>SKILLS</h2>
+                <h4>Skill 1</h4>
+                <h4>Skill 2</h4>
+                <h4>Skill 3</h4>
+                <h4>Skill 4</h4>
+                <h4>Skill 5</h4>
+            </div>
+            <div id="piechart"></div>
+        </div>
+        <div class="det" style="flex-direction: column;">
+            <h2>CODING PLATFORM USERNAME</h2>
+            <div class="det1">
+            <h4>GFG</h4>
+            <h4>GFG</h4>
+        </div>
+        <div class="det1">
+            <h4>GFG</h4>
+            <h4>GFG</h4>
+        </div>
+            
+        </div>
+        <div class="crs_content">
+            <div class="tech_crs courses">
+              <h1>Courses</h1>
+              <div class="crs_card_wrap">
+                <div class="crs_card crs_hig">
+
+                  <div class="crs_nme">
+                    <span class="crs_des">Organisation</span>
+                    <span class="crs_des">Course Name</span>
+                    <span class="crs_tpe">Course ID</span>
+                  </div>
+                  <div class="crs_expl">
+                     <button class="crs_rgstr">Link</button>
+                  </div>
+                </div>
+          
+                <div class="crs_card">
+
+                  <div class="crs_nme">
+                    <span class="crs_des">Organisation</span>
+                    <span class="crs_des">Course Name</span>
+                    <span class="crs_tpe">Course ID</span>
+                  </div>
+                  <div class="crs_expl">
+                    <button class="crs_rgstr">Link</button>
+                  </div>
+                </div>
+          
+                <div class="crs_card">
+
+                  <div class="crs_nme">
+                    <span class="crs_des">Organisation</span>
+                    <span class="crs_des">Course Name</span>
+                    <span class="crs_tpe">Course ID</span>
+                  </div>
+                  <div class="crs_expl">
+                    <button class="crs_rgstr">Link</button>
+                  </div>
+                </div>
+          
+                <div class="crs_card crs_non_hig">
+
+                  <div class="crs_nme">
+                    <span class="crs_des">Organisation</span>
+                    <span class="crs_des">Course Name</span>
+                    <span class="crs_tpe">Course ID</span>
+                  </div>
+                  <div class="crs_expl">
+                    <button class="crs_rgstr">Link</button>
+                  </div>
+                </div>
+          
+                <button class="sld_rgt" onclick="SlideRightPlease(this)">
+                  <img src="/static/images/svgs/next.svg" />
+                </button>
+                <button class="sld_lft" onclick="SlideLeftPlease(this)">
+                  <img src="/static/images/svgs/next.svg" />
+                </button>
+              </div>
+            </div>
+            <div class="non_tech_crs courses">
+              <h1 class="crs_head">Projects</h1>
+              <div class="crs_card_wrap">
+                <div class="crs_card crs_hig">
+
+                  <div class="crs_nme">
+                    <span class="crs_des">Project Name</span>
+                    <span class="crs_tpe">Technology Used</span>
+                  </div>
+                  <div class="crs_expl">
+                    <button class="crs_rgstr">Link</button>
+                  </div>
+                </div>
+          
+                <div class="crs_card">
+
+                  <div class="crs_nme">
+                    <span class="crs_des">Project Name</span>
+                    <span class="crs_tpe">Technology Used</span>
+                  </div>
+                  <div class="crs_expl">
+                    <button class="crs_rgstr">Link</button>
+                  </div>
+                </div>
+          
+                <div class="crs_card">
+
+                  <div class="crs_nme">
+                    <span class="crs_des">Project Name</span>
+                    <span class="crs_tpe">Technology Used</span>
+                  </div>
+                  <div class="crs_expl">
+                    <button class="crs_rgstr">Link</button>
+                  </div>
+                </div>
+          
+                <div class="crs_card crs_non_hig">
+
+                  <div class="crs_nme">
+                    <span class="crs_des">Project Name</span>
+                    <span class="crs_tpe">Technology Used</span>
+                  </div>
+                  <div class="crs_expl">
+                    <button class="crs_rgstr">Link</button>
+                  </div>
+                </div>
+          
+                <button class="sld_rgt" onclick="SlideRightPlease(this)">
+                  <img src="/static/images/svgs/next.svg" />
+                </button>
+                <button class="sld_lft" onclick="SlideLeftPlease(this)">
+                  <img src="/static/images/svgs/next.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script>google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+          
+          // Draw the chart and set the chart values
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['AM', 8],
+            ['OOPs', 2],
+            ['CS', 2],
+            ['DBMS', 2],
+            ['TOC', 2],
+            ['COA', 8]
+          ]); 
+          
+            // Optional; add a title and set the width and height of the chart
+            var options = {'title':'My Average Day', 'width':550, 'height':400};
+          
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+          }
+          
+          let gradients = [
+            "linear-gradient(180deg, #6A11CB 0%, #2575FC 100%)",
+            "transparent linear-gradient(180deg, #30CFD0 0%, #330867 100%)",
+            "transparent linear-gradient(180deg, #453A94 0%, #F43B47",
+            "transparent linear-gradient(180deg, #6A11CB 0%, #FA71CD 100%)",
+            "transparent linear-gradient(180deg, #FF0844 0%, #FFB199 100%)",
+            "transparent linear-gradient(180deg, #453A94 50%,#F43B47 100%)",
+            "transparent linear-gradient(180deg, #6A11CB 0%, #FA71CD 100%)",
+            "transparent linear-gradient(180deg, #30CFD0 0%, #330867 100%)",
+          ];
+          
+          let courseCards = document.getElementsByClassName("crs_card");
+          
+          for (var index = 0; index < courseCards.length; index++) {
+            courseCards[index].style.background = gradients[index];
+          }
+          
+          function SlideRightPlease(x) {
+            var crsWrap = x.parentElement;
+            crsWrap.scrollTo(500, 0);
+          
+            let cptcrsTech = document.querySelectorAll(
+              ".tech_crs .crs_card_wrap .crs_card"
+            );
+            let cptcrsNontech = document.querySelectorAll(
+              ".non_tech_crs .crs_card_wrap .crs_card"
+            );
+          
+            if (crsWrap.parentElement.classList.contains("tech_crs")) {
+              for (var i = 0; i < cptcrsTech.length; i++) {
+                if (cptcrsTech[i].classList.contains("crs_hig") && i < 3) {
+                  cptcrsTech[i].classList.remove("crs_hig");
+                  cptcrsTech[i + 1].classList.add("crs_hig");
+                  break;
+                }
+              }
+              cptcrsTech.item(3).classList.remove("crs_non_hig");
+              cptcrsTech.item(0).classList.add("crs_non_hig");
+          
+              if (cptcrsTech[0].classList.contains("crs_hig")) {
+                document.getElementsByClassName("sld_lft")[0].style.display = "none";
+              } else {
+                document.getElementsByClassName("sld_lft")[0].style.display = "flex";
+              }
+          
+              if (cptcrsTech[3].classList.contains("crs_hig")) {
+                document.getElementsByClassName("sld_rgt")[0].style.display = "none";
+              } else {
+                document.getElementsByClassName("sld_rgt")[0].style.display = "flex";
+              }
+            }
+          
+            if (crsWrap.parentElement.classList.contains("non_tech_crs")) {
+              for (var i = 0; i < cptcrsNontech.length; i++) {
+                if (cptcrsNontech[i].classList.contains("crs_hig") && i < 3) {
+                  cptcrsNontech[i].classList.remove("crs_hig");
+                  cptcrsNontech[i + 1].classList.add("crs_hig");
+                  break;
+                }
+              }
+              cptcrsNontech.item(3).classList.remove("crs_non_hig");
+              cptcrsNontech.item(0).classList.add("crs_non_hig");
+          
+              if (cptcrsNontech[0].classList.contains("crs_hig")) {
+                document.getElementsByClassName("sld_lft")[1].style.display = "none";
+              } else {
+                document.getElementsByClassName("sld_lft")[1].style.display = "flex";
+              }
+          
+              if (cptcrsNontech[3].classList.contains("crs_hig")) {
+                document.getElementsByClassName("sld_rgt")[1].style.display = "none";
+              } else {
+                document.getElementsByClassName("sld_rgt")[1].style.display = "flex";
+              }
+            }
+          }
+          
+          function SlideLeftPlease(x) {
+            var crsWrap = x.parentElement;
+            crsWrap.scrollTo(-500, 0);
+          
+            let cptcrsTech = document.querySelectorAll(
+              ".tech_crs .crs_card_wrap .crs_card"
+            );
+            let cptcrsNontech = document.querySelectorAll(
+              ".non_tech_crs .crs_card_wrap .crs_card"
+            );
+          
+            if (crsWrap.parentElement.classList.contains("tech_crs")) {
+              for (var i = 3; i < cptcrsTech.length; i--) {
+                if (cptcrsTech[i].classList.contains("crs_hig") && i > 0) {
+                  cptcrsTech[i].classList.remove("crs_hig");
+                  cptcrsTech[i - 1].classList.add("crs_hig");
+                  break;
+                }
+              }
+              cptcrsTech.item(0).classList.remove("crs_non_hig");
+              cptcrsTech.item(3).classList.add("crs_non_hig");
+          
+              if (cptcrsTech[0].classList.contains("crs_hig")) {
+                document.getElementsByClassName("sld_lft")[0].style.display = "none";
+              } else {
+                document.getElementsByClassName("sld_lft")[0].style.display = "flex";
+              }
+          
+              if (cptcrsTech[3].classList.contains("crs_hig")) {
+                document.getElementsByClassName("sld_rgt")[0].style.display = "none";
+              } else {
+                document.getElementsByClassName("sld_rgt")[0].style.display = "flex";
+              }
+            }
+          
+            if (crsWrap.parentElement.classList.contains("non_tech_crs")) {
+              for (var i = 3; i < cptcrsNontech.length; i--) {
+                if (cptcrsNontech[i].classList.contains("crs_hig") && i > 0) {
+                  cptcrsNontech[i].classList.remove("crs_hig");
+                  cptcrsNontech[i - 1].classList.add("crs_hig");
+                  break;
+                }
+              }
+              cptcrsNontech.item(0).classList.remove("crs_non_hig");
+              cptcrsNontech.item(3).classList.add("crs_non_hig");
+          
+              if (cptcrsNontech[0].classList.contains("crs_hig")) {
+                document.getElementsByClassName("sld_lft")[1].style.display = "none";
+              } else {
+                document.getElementsByClassName("sld_lft")[1].style.display = "flex";
+              }
+          
+              if (cptcrsNontech[3].classList.contains("crs_hig")) {
+                document.getElementsByClassName("sld_rgt")[1].style.display = "none";
+              } else {
+                document.getElementsByClassName("sld_rgt")[1].style.display = "flex";
+              }
+            }
+          }</script>
+   </body>
+</html>
